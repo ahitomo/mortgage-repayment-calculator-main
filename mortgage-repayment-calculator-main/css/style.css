@@ -1,0 +1,380 @@
+.color {
+    background-color: hsl(61, 70%, 52%);
+    background-color: hsl(4, 69%, 50%);
+    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(202, 86%, 94%);
+    background-color: hsl(203, 41%, 72%);
+    background-color: hsl(200, 26%, 54%);
+    background-color: hsl(200, 24%, 40%);
+    background-color: hsl(202, 55%, 16%);
+
+    background-color: #FAFAE0;
+    background-color: #133040;
+    background-color: #0E2431;
+
+    background-color: hsl(60,72%,92%);
+    background-color: hsl(61,70%,76%);
+    background-color: hsl(201,54%,16%);
+    background-color: hsl(202,55%,12%);
+}
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(202, 86%, 94%);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+
+.calculator-body {
+    background-color: hsl(0, 0%, 100%);
+    width: 1080px;
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* 左 */
+
+.left-body {
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    padding: 40px 32px;
+    object-fit: cover;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.large {
+    font-size: 24px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.navy {
+    color: hsl(202, 55%, 16%);
+}
+
+.clear-all {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    cursor: pointer;
+}
+
+.clear-all:hover {
+    color: hsl(202, 55%, 16%);
+}
+
+.dark-gray {
+    color: hsl(200, 24%, 40%);
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+.margin-top-narrow {
+    margin-top: 8px;
+}
+
+.input-box {
+    border: 1px solid hsl(200, 24%, 40%);;
+    border-radius: 5px;
+    width: 100%;
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#radio-box .input-box:hover {
+    border-color: hsl(61, 70%, 52%);
+}
+
+.input-box:hover + .pale-blue {
+    background-color: hsl(61, 70%, 52%);
+}
+
+.pale-blue  {
+    background-color: hsl(202, 86%, 94%);
+    color: hsl(200, 24%, 40%);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.input-box input {
+    border: none;
+    height: 100%;
+    width: 65%;
+    outline: none;
+    object-fit: cover;
+    color: hsl(202, 55%, 16%);
+    text-indent: 1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px hsl(0, 0%, 100%) inset;
+    -webkit-text-fill-color: hsl(202, 55%, 16%) !important;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.width {
+    width: 48%;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-inline: 16px;
+    width:  20px;
+    height: 20px;
+    position: relative;
+    border: 1px solid hsl(200, 24%, 40%);
+    border-radius: 50%;
+    vertical-align: -2px;
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+}
+
+#radio-box label:focus-within {
+    border-color: hsl(61, 70%, 52%);
+}
+
+input[type="radio"]:focus {
+    border-color: hsl(61, 70%, 52%);
+}
+
+input[type="radio"]:checked {
+    border-color: hsl(61, 70%, 52%);
+}
+
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: hsl(61, 70%, 52%);
+    content: "";
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.margin-top-wide {
+    margin-top: 40px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: hsl(61, 70%, 52%);
+    width: 60%;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline-color: hsl(202, 55%, 16%);
+}
+
+.button:hover {
+    background-color: hsl(61,70%,76%);
+}
+
+svg {
+    margin-right: 1em;
+}
+
+/* 右 */
+
+.right-body {
+    width: 50%;
+    background-color: hsl(202, 55%, 16%);
+    border-bottom-left-radius: 80px;
+    padding: 40px 32px;
+}
+
+.result-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.white {
+    color: hsl(0, 0%, 100%);
+}
+
+.right-gray {
+    color: hsl(203, 41%, 72%);
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.result-box {
+    background-color: hsl(202,55%,12%);
+    padding-inline: 30px;
+    border-radius: 8px;
+    box-shadow: 0px -4px hsl(61, 70%, 52%);
+}
+
+.result-content {
+    padding-block: 30px;
+}
+
+.gray {
+    color: hsl(200, 26%, 54%);
+}
+
+.yellow {
+    color: hsl(61, 70%, 52%);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.border-bottom {
+    border-bottom: 2px solid hsl(202, 32%, 20%);
+}
+
+
+/* js */
+
+.focus-span {
+    background-color: hsl(61, 70%, 52%);
+}
+
+.focus-p {
+    border-color: hsl(61, 70%, 52%);
+}
+
+.checked {
+    border-color: hsl(61, 70%, 52%);
+    background-color: hsl(60,72%,92%);
+}
+
+.empty-alert {
+    margin-top: 8px;
+    color: hsl(4, 69%, 50%);
+}
+
+.border-color-red {
+    border-color: hsl(4, 69%, 50%);
+}
+
+.background-color-red {
+    background-color: hsl(4, 69%, 50%);
+    color: hsl(0, 0%, 100%);
+}
+
+.display-none {
+    display: none;
+}
+
+.border-color-navy {
+    border-color: hsl(202, 55%, 16%);
+}
+
+
+/* メディアクエリ */
+
+@media screen and (max-width:1080px) {
+
+    .calculator-body {
+        display: block;
+        width: 540px;
+        border-radius: unset;
+    }
+
+    .left-body {
+        width: auto;
+    }
+
+    .flex-between {
+        display: block;
+    }    
+
+    .clear-all {
+        margin-top: 8px;
+        display: block;
+    }
+
+    .input-box {
+        display: flex;
+    }
+
+    .input-box input {
+        width: 80%;
+    }
+
+    input[type="radio"] {
+        width: 20px;
+}
+
+    .pale-blue  {
+        display: flex;
+        align-items: center;
+    }
+
+    .width {
+        width: 100%;
+    }
+
+    .media-query-margin-top {
+        margin-top: 30px;
+    }
+
+    .button {
+        width: 100%;
+    }
+    .right-body {
+        width: auto;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .calculator-body {
+        width: 100vw;
+    }
+}

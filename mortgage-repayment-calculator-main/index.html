@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+  <div class="calculator-body">
+
+    <!-- 左 -->
+    
+    <div class="left-body">
+
+      <div class="flex-between">
+        <h1 class="large bold navy">Mortgage Calculator</h1>
+        <a class="clear-all dark-gray" onclick="window.location.reload();">Clear All</a>
+      </div>
+
+      <label class="dark-gray margin-top-wide" for="amount">Mortgage Amount
+        <p class="input-box margin-top-narrow">
+          <span class="bold pale-blue">£</span>
+          <input type="text" name="amount" id="amount">
+        </p>
+      </label>
+      
+      <div class="flex-between margin-top align-start">
+        <label class="dark-gray width" for="term">Mortgage Term
+          <p class="input-box flex-between margin-top-narrow">
+            <input type="text" name="term" id="term">
+            <span class="bold pale-blue">years</span>
+          </p>
+        </label>
+
+        <label class="dark-gray width media-query-margin-top" for="rate">Interest Rate
+          <p class="input-box flex-between margin-top-narrow">
+            <input type="text" name="rate" id="rate">
+            <span class="bold pale-blue">%</span>
+          </p>
+        </label>
+      </div>
+
+      <div id="radio-box" class="margin-top">
+        <p class="dark-gray">Mortgage Type</p>
+          <label class="input-box navy flex-center margin-top-narrow bold" for="repayment"><input type="radio" name="type" value="repayment" id="repayment">Repayment</label>
+          <label class="input-box navy flex-center margin-top-narrow bold" for="interest-only"  ><input type="radio" name="type" value="interest-only" id="interest-only">Interest Only</label>
+      </div>
+          
+      <button class="button margin-top-wide navy bold" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+        Calculate Repayments
+      </a>
+
+    </div>
+
+
+    <!-- 右 -->
+
+    <div class="right-body">
+
+      <!-- Empty results start -->
+
+      <div class="result-empty">
+        <img src="assets/images/illustration-empty.svg" alt="illustration-empty">
+        <p class="large bold white margin-top">Results shown here</p>
+        <p class="right-gray margin-top text-center">Complete the form and click “calculate repayments” to<br>see what your monthly repayments would be.</p>
+      </div>
+
+      <!-- Completed results start -->
+      <div class="result-completed display-none">
+        <h2 class="large bold white">Your results</h2>
+        <p class="right-gray margin-top">
+          Your results are shown below based on the information<br>you provided. To adjust the results, edit the form and<br>click “calculate repayments” again.
+        </p>
+
+        <div class="result-box margin-top-wide">
+          <div class="result-content border-bottom">
+            <p class="gray">Your monthly repayments</p>
+            <p class="yellow margin-top-narrow">£<span id="monthly-repayment" class="yellow"></span></p>
+          </div>
+          <div class="result-content">
+            <p class="gray">Total you'll repay over the term</p>
+            <p class="large bold white margin-top-narrow">£<span id="total-repayment" class="large bold white"></span></p>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
